@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="brace_urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.000700342393179829 -0.0435124830425221 0.12853835112289"
+        rpy="0 0 0" />
+      <mass
+        value="0.662905358417652" />
+      <inertia
+        ixx="0.000781812083402016"
+        ixy="0.000217854278375065"
+        ixz="1.63119429046783E-05"
+        iyy="0.00165951411646135"
+        iyz="0.000101142649428765"
+        izz="0.00127566173333875" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://brace_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://brace_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link1">
+    <inertial>
+      <origin
+        xyz="0.121476017398639 0.092402477278282 0.104260400695861"
+        rpy="0 0 0" />
+      <mass
+        value="0.53804717228036" />
+      <inertia
+        ixx="0.000603842641665567"
+        ixy="-1.51665676710393E-05"
+        ixz="-0.000161680089194202"
+        iyy="0.0019529417911791"
+        iyz="-0.000111171223230596"
+        izz="0.00199613547347201" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://brace_urdf/meshes/link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://brace_urdf/meshes/link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="revolute">
+    <origin
+      xyz="-0.13791 -0.118 0.28828"
+      rpy="0.39932 -0.054387 0.2067" />
+    <parent
+      link="base_link" />
+    <child
+      link="link1" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link2">
+    <inertial>
+      <origin
+        xyz="-0.141440951471399 0.0625810783308018 0.104915859649969"
+        rpy="0 0 0" />
+      <mass
+        value="0.53804717228036" />
+      <inertia
+        ixx="0.000590138622110953"
+        ixy="1.51341964581751E-05"
+        ixz="-8.53119545689772E-05"
+        iyy="0.0020151652012535"
+        iyz="-0.000107810719897529"
+        izz="0.00194761608295223" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://brace_urdf/meshes/link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://brace_urdf/meshes/link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="revolute">
+    <origin
+      xyz="0.12393 -0.069916 0.3308"
+      rpy="0.12229 -0.10798 0.19385" />
+    <parent
+      link="base_link" />
+    <child
+      link="link2" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
